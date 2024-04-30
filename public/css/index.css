@@ -1,0 +1,17 @@
+body {
+    background-color: #0e1117;
+    color: white;
+    text-align: center;
+}
+
+.logo-header {
+    margin: 3%;
+}
+
+#sapient-logo {
+    max-width: 20%;
+}
+
+#qrCodeParent {
+    background-color: white;
+}

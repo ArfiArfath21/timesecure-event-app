@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sub Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/subpage.css">
+    <script src="/js/subpage.js" defer></script>
+</head>
+<body>
+    <div class="countdownContainer">
+        <h1><%= message %></h1>
+        <% if (expires) { %>
+            <div id="countdownTimer">Expires in: <span id="timer" data-expires="<%= expires %>"></span></div>
+            <div class="container mt-5">
+                <h2>Signup Form</h2>
+                <form id="signupForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Would you like to receive our newsletter?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="newsletter" id="newsletterYes" value="Yes" checked>
+                            <label class="form-check-label" for="newsletterYes">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="newsletter" id="newsletterNo" value="No">
+                            <label class="form-check-label" for="newsletterNo">No</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        <% } else { %>
+            <p>No valid token provided.</p>
+        <% } %>
+    </div>
+    
+</body>
+</html>
